@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Conoce los servicios de HealthyFit: entrenamiento personalizado, asesoría en nutrición y programas de bienestar para mejorar tu salud.">
+    <meta name="keywords"
+        content="entrenamiento personalizado, nutrición, bienestar, plan de alimentación, rutinas, HealthyFit">
+    <meta name="theme-color" content="#17BFD0">
+    <title>Servicios | HealthyFit: Entrenamiento Personalizado, Nutrición y Bienestar</title>
+
+    <link rel="icon" type="image/svg+xml" href="logo/logo_entregable_LISTO_1_-removebg-preview.png">
+
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONOS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- ESTILOS PROPIOS: primero los generales, luego los de la página -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/servicios.css">
+</head>
+
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <!-- ENCABEZADO Y MENÚ -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg shadow-sm" aria-label="Menú principal">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo/logo_entregable_LISTO_1_-removebg-preview.png" alt="HealthyFit, ir al inicio" width="184" height="45">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="contenido">
+
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="encabezado-pagina py-5">
+            <div class="container py-3">
+                <h1 class="display-5 fw-bold">Nuestros servicios</h1>
+                <p class="lead mb-0">Entrenamiento personalizado, nutrición y bienestar: un acompañamiento completo para
+                    tu salud.</p>
+            </div>
+        </section>
+
+
+        <!-- 1. ENTRENAMIENTO PERSONALIZADO -->
+        <section id="entrenamiento" class="servicio-detalle  py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6">
+                        <img src="img/rutina-ejercicios.jpg"
+                            alt="Entrenador personal guiando a una clienta en una rutina de ejercicios" width="736"
+                            height="414" loading="lazy">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2><i class="bi bi-activity" aria-hidden="true"></i> Entrenamiento personalizado</h2>
+                        <p>Cada persona es distinta, por eso cada rutina también. Diseñamos un plan de entrenamiento
+                            según tu objetivo, tu nivel físico y el tiempo que tienes disponible, con seguimiento
+                            constante de tu entrenador.</p>
+
+                        <h3 class="h5 mt-4">¿Qué incluye?</h3>
+                        <ul class="list-unstyled lista-incluye">
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Evaluación física
+                                    inicial</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Rutinas a tu medida
+                                    (presencial o en casa)</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Seguimiento semanal de
+                                    tu progreso</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Ajustes del plan según
+                                    tus resultados</span></li>
+                        </ul>
+
+                        <a href="contacto.html" class="btn btn-marca">Solicitar información</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 2. NUTRICIÓN -->
+        <section id="nutricion" class="servicio-detalle servicio-alterno py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="img/doctora.jpg"
+                            alt="Nutricionista explicando un plan de alimentación saludable a una paciente" width="1024"
+                            height="588" loading="lazy">
+                    </div>
+
+                    <div class="col-lg-6 order-lg-1">
+                        <h2><i class="bi bi-egg-fried" aria-hidden="true"></i> Nutrición</h2>
+                        <p>Comer bien no tiene que ser complicado. Nuestros nutricionistas crean un plan de alimentación
+                            saludable, fácil de seguir y adaptado a tus gustos, tu rutina y tus metas.</p>
+
+                        <h3 class="h5 mt-4">¿Qué incluye?</h3>
+                        <ul class="list-unstyled lista-incluye">
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Consulta y valoración
+                                    nutricional</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Plan de alimentación
+                                    personalizado</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Recetas y listas de
+                                    compras</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Controles periódicos de
+                                    avance</span></li>
+                        </ul>
+
+                        <a href="contacto.html" class="btn btn-marca">Solicitar información</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. BIENESTAR -->
+        <section id="bienestar" class="servicio-detalle  py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6">
+                        <img src="img/yoga.jpg" alt="Grupo de personas practicando yoga y respiración" width="735"
+                            height="374" loading="lazy">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <h2><i class="bi bi-heart-pulse" aria-hidden="true"></i> Bienestar</h2>
+                        <p>La salud no es solo ejercicio y comida. Te acompañamos con hábitos de descanso, manejo del
+                            estrés y actividades que te ayudan a sentirte en equilibrio cada día.</p>
+
+                        <h3 class="h5 mt-4">¿Qué incluye?</h3>
+                        <ul class="list-unstyled lista-incluye">
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Talleres de manejo del
+                                    estrés</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Clases de yoga y
+                                    respiración</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Guía de hábitos de
+                                    sueño saludables</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> <span>Eventos y retos de
+                                    bienestar</span></li>
+                        </ul>
+
+                        <a href="contacto.html" class="btn btn-marca">Solicitar información</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PREGUNTAS FRECUENTES (información complementaria) -->
+        <section id="preguntas" class="py-5 fondo-suave">
+            <div class="container py-3">
+                <h2 class="titulo-seccion mb-5">Preguntas frecuentes</h2>
+
+                <div class="row justify-content-center">
+                    <aside class="col-lg-8">
+                        <div class="accordion" id="acordeonPreguntas">
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#pregunta1" aria-expanded="true" aria-controls="pregunta1">
+                                        ¿Necesito experiencia previa para empezar?
+                                    </button>
+                                </h3>
+                                <div id="pregunta1" class="accordion-collapse collapse show"
+                                    data-bs-parent="#acordeonPreguntas">
+                                    <div class="accordion-body">
+                                        No. Empezamos con una evaluación y adaptamos todo a tu nivel, ya seas
+                                        principiante o tengas experiencia.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#pregunta2" aria-expanded="false" aria-controls="pregunta2">
+                                        ¿Puedo combinar entrenamiento y nutrición?
+                                    </button>
+                                </h3>
+                                <div id="pregunta2" class="accordion-collapse collapse"
+                                    data-bs-parent="#acordeonPreguntas">
+                                    <div class="accordion-body">
+                                        Sí. Combinar ambos servicios mejora los resultados, porque tu entrenador y tu
+                                        nutricionista trabajan con el mismo objetivo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#pregunta3" aria-expanded="false" aria-controls="pregunta3">
+                                        ¿Las sesiones son presenciales o virtuales?
+                                    </button>
+                                </h3>
+                                <div id="pregunta3" class="accordion-collapse collapse"
+                                    data-bs-parent="#acordeonPreguntas">
+                                    <div class="accordion-body">
+                                        Ofrecemos ambas modalidades. Puedes elegir la que mejor se adapte a tu horario y
+                                        a tu comodidad.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#pregunta4" aria-expanded="false" aria-controls="pregunta4">
+                                        ¿Cómo puedo empezar?
+                                    </button>
+                                </h3>
+                                <div id="pregunta4" class="accordion-collapse collapse"
+                                    data-bs-parent="#acordeonPreguntas">
+                                    <div class="accordion-body">
+                                        Escríbenos desde la página de <a href="contacto.html">Contacto</a> y te
+                                        responderemos para coordinar tu primera evaluación.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- LLAMADO A LA ACCIÓN -->
+        <section id="empezar" class="cta-final py-5">
+            <div class="container">
+                <h2>¿Listo para empezar?</h2>
+                <p class="lead">Escríbenos y te ayudamos a elegir el servicio ideal para ti.</p>
+                <a href="contacto.html" class="btn btn-claro btn-lg">Contáctanos</a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center text-center">
+
+                <div class="col-12 col-md-4">
+                    <h3>Enlaces</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Contacto</h3>
+                    <p class="mb-1"><i class="bi bi-envelope" aria-hidden="true"></i> contacto@healthyfit.com</p>
+                    <p class="mb-1"><i class="bi bi-telephone" aria-hidden="true"></i> +51 900 000 000</p>
+                    <p class="mb-1"><i class="bi bi-geo-alt" aria-hidden="true"></i> Ica, Perú</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Síguenos</h3>
+                    <div class="redes d-flex justify-content-center gap-2">
+                        <a href="#" class="fs-5" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-5" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-5" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-5" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+            <p class="text-center mb-0">© 2026 HealthyFit. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPT DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

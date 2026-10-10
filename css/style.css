@@ -1,0 +1,407 @@
+/* =========================================================
+   HEALTHYFIT · ESTILOS GENERALES
+   Se carga en TODAS las páginas, antes del CSS propio de cada una.
+   Contenido:
+   1. Variables y base
+   2. Menú (navbar)
+   3. Botones
+   4. Encabezado de página, secciones y llamado a la acción
+   5. Tarjetas e iconos
+   6. Pie de página
+   7. Accesibilidad y movimiento reducido
+   ========================================================= */
+
+/* ---------- 1. VARIABLES Y BASE ---------- */
+:root {
+    /* Colores de la marca (logo: cian y magenta) */
+    --magenta: #D51AA8;
+    --magenta-osc: #AF1288;
+    --magenta-prof: #8A0E6C;
+    --cian: #17BFD0;
+    --cian-osc: #078DA3;
+    --cian-txt: #05697B;
+    --cian-suave: #E3F8FA;
+    --rosa-suave: #FCE8F7;
+
+    /* Neutros */
+    --texto: #263238;
+    --texto-suave: #52626B;
+    --fondo: #FFFFFF;
+    --oscuro: #16242B;
+
+    /* Detalles */
+    --radio: 16px;
+    --sombra: 0 8px 24px rgba(22, 36, 43, .08);
+    --sombra-fuerte: 0 14px 32px rgba(22, 36, 43, .16);
+
+    /* Ajustes de Bootstrap con los colores de la marca */
+    --bs-body-color: var(--texto);
+    --bs-heading-color: var(--oscuro);
+    --bs-link-color: var(--magenta-osc);
+    --bs-link-hover-color: var(--magenta-prof);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--texto);
+    background: var(--fondo);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+.meta {
+    color: var(--texto-suave);
+}
+
+/* Fondos de sección */
+.fondo-suave {
+    background-color: #F3FBFC;
+}
+
+.servicio-alterno {
+    background-color: var(--rosa-suave);
+}
+
+/* ---------- 2. MENÚ ---------- */
+.navbar {
+    background-color: #FFFFFF;
+    border-bottom: 4px solid var(--cian);
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+}
+
+.navbar .navbar-brand img {
+    height: 45px;
+    width: auto;
+}
+
+.navbar .nav-link {
+    color: var(--texto);
+    font-weight: 700;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    transition: color .2s ease, background-color .2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+    color: var(--magenta-osc);
+    background-color: var(--rosa-suave);
+}
+
+.navbar .nav-link.active {
+    color: #FFFFFF;
+    background-color: var(--magenta-osc);
+}
+
+.navbar-toggler {
+    border-color: var(--cian-osc);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(23, 191, 208, .35);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav {
+        padding-top: .75rem;
+        gap: .25rem;
+    }
+}
+
+/* ---------- 3. BOTONES ---------- */
+.btn {
+    font-weight: 700;
+    border-radius: 999px;
+    padding: .6rem 1.5rem;
+}
+
+.btn-lg {
+    padding: .8rem 2rem;
+}
+
+.btn-sm {
+    padding: .35rem 1rem;
+}
+
+/* Botón principal (magenta) */
+.btn-marca {
+    --bs-btn-color: #FFFFFF;
+    --bs-btn-bg: var(--magenta-osc);
+    --bs-btn-border-color: var(--magenta-osc);
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: var(--magenta-prof);
+    --bs-btn-hover-border-color: var(--magenta-prof);
+    --bs-btn-focus-shadow-rgb: 213, 26, 168;
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: var(--magenta-prof);
+    --bs-btn-active-border-color: var(--magenta-prof);
+}
+
+/* Botón secundario con borde (cian) */
+.btn-marca-borde {
+    --bs-btn-color: var(--cian-txt);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--cian-osc);
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: var(--cian-txt);
+    --bs-btn-hover-border-color: var(--cian-txt);
+    --bs-btn-focus-shadow-rgb: 23, 191, 208;
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: var(--cian-txt);
+    --bs-btn-active-border-color: var(--cian-txt);
+    border-width: 2px;
+}
+
+/* Botón claro para fondos de color */
+.btn-claro {
+    --bs-btn-color: var(--magenta-prof);
+    --bs-btn-bg: #FFFFFF;
+    --bs-btn-border-color: #FFFFFF;
+    --bs-btn-hover-color: var(--magenta-prof);
+    --bs-btn-hover-bg: var(--cian-suave);
+    --bs-btn-hover-border-color: var(--cian-suave);
+    --bs-btn-focus-shadow-rgb: 255, 255, 255;
+    --bs-btn-active-color: var(--magenta-prof);
+    --bs-btn-active-bg: var(--cian-suave);
+    --bs-btn-active-border-color: var(--cian-suave);
+}
+
+/* Botón con borde blanco para fondos oscuros */
+.btn-borde-claro {
+    --bs-btn-color: #FFFFFF;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #FFFFFF;
+    --bs-btn-hover-color: var(--oscuro);
+    --bs-btn-hover-bg: #FFFFFF;
+    --bs-btn-hover-border-color: #FFFFFF;
+    --bs-btn-focus-shadow-rgb: 255, 255, 255;
+    border-width: 2px;
+}
+
+/* ---------- 4. ENCABEZADO DE PÁGINA, SECCIONES Y CTA ---------- */
+.encabezado-pagina {
+    --bs-heading-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(135deg, #066B7D 0%, #A00F7C 100%);
+}
+
+.encabezado-pagina::before,
+.encabezado-pagina::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    pointer-events: none;
+}
+
+.encabezado-pagina::before {
+    width: 280px;
+    height: 280px;
+    top: -120px;
+    left: -80px;
+}
+
+.encabezado-pagina::after {
+    width: 200px;
+    height: 200px;
+    bottom: -90px;
+    right: 6%;
+}
+
+.encabezado-pagina .container {
+    position: relative;
+    z-index: 1;
+}
+
+.encabezado-pagina .lead {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.titulo-seccion::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: .75rem auto 0;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--cian), var(--magenta));
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--texto-suave);
+    max-width: 640px;
+    margin: 0 auto 3rem;
+}
+
+/* Llamado a la acción */
+.cta-final {
+    --bs-heading-color: #FFFFFF;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(135deg, var(--magenta-osc) 0%, var(--cian-txt) 100%);
+}
+
+/* ---------- 5. TARJETAS E ICONOS ---------- */
+.card {
+    border: 1px solid #D6EEF1;
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-valor {
+    border-radius: var(--radio);
+}
+
+.icono-circulo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--cian-txt);
+    background-color: var(--cian-suave);
+}
+
+.icono-circulo.magenta {
+    color: var(--magenta-osc);
+    background-color: var(--rosa-suave);
+}
+
+/* ---------- 6. PIE DE PÁGINA ---------- */
+.pie {
+    --bs-heading-color: #FFFFFF;
+    color: #D5E2E7;
+    background-color: var(--oscuro);
+    border-top: 4px solid var(--magenta);
+}
+
+.pie img {
+    height: 45px;
+    width: auto;
+}
+
+.pie h3 {
+    font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.pie a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.pie a:hover,
+.pie a:focus-visible {
+    color: #8FE6F0;
+    text-decoration: underline;
+}
+
+.pie .redes a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-right: .4rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .1);
+    text-decoration: none;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.pie .redes a:hover,
+.pie .redes a:focus-visible {
+    background-color: var(--magenta-osc);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.pie hr {
+    border-color: rgba(255, 255, 255, .25);
+    opacity: 1;
+}
+
+/* ---------- 7. ACCESIBILIDAD Y MOVIMIENTO REDUCIDO ---------- */
+:focus-visible {
+    outline: 3px solid var(--cian);
+    outline-offset: 2px;
+}
+
+.salto-contenido {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 2000;
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    background: var(--magenta-prof);
+    color: #FFFFFF;
+    font-weight: 700;
+    transition: top .2s ease;
+}
+
+.salto-contenido:focus {
+    top: 1rem;
+    color: #FFFFFF;
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

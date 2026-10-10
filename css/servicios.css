@@ -1,0 +1,48 @@
+/* =========================================================
+   HEALTHYFIT · SERVICIOS
+   ========================================================= */
+
+.servicio-detalle img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.servicio-detalle h2 i {
+    color: var(--cian-txt);
+    margin-right: .25rem;
+}
+
+.servicio-alterno h2 i {
+    color: var(--magenta-osc);
+}
+
+.lista-incluye li {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    margin-bottom: .5rem;
+}
+
+.lista-incluye i {
+    margin-top: .2rem;
+    color: var(--magenta-osc);
+}
+
+/* Preguntas frecuentes */
+.accordion {
+    --bs-accordion-border-color: #D6EEF1;
+    --bs-accordion-border-radius: var(--radio);
+    --bs-accordion-inner-border-radius: var(--radio);
+    --bs-accordion-active-bg: var(--cian-suave);
+    --bs-accordion-active-color: var(--cian-txt);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 3px rgba(23, 191, 208, .35);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}
+
+.accordion-button {
+    font-weight: 700;
+}

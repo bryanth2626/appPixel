@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blog de HealthyFit con consejos de alimentación, ejercicio y bienestar para cuidarte todos los días.">
+    <meta name="keywords" content="blog, alimentación saludable, ejercicio en casa, bienestar, consejos, HealthyFit">
+    <meta name="theme-color" content="#17BFD0">
+    <title>Blog | HealthyFit: Entrenamiento Personalizado, Nutrición y Bienestar</title>
+
+    <link rel="icon" type="image/svg+xml" href="logo/logo_entregable_LISTO_1_-removebg-preview.png">
+
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ICONOS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- ESTILOS PROPIOS: primero los generales, luego los de la página -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <!-- ENCABEZADO Y MENÚ -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg shadow-sm" aria-label="Menú principal">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo/logo_entregable_LISTO_1_-removebg-preview.png" alt="HealthyFit, ir al inicio" width="184" height="45">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="contenido">
+
+        <!-- TÍTULO DE LA PÁGINA -->
+        <section class="encabezado-pagina py-5">
+            <div class="container py-3">
+                <h1 class="display-5 fw-bold">Blog saludable</h1>
+                <p class="lead mb-0">Consejos sobre alimentación, ejercicio y bienestar para cuidarte todos los días.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ARTÍCULOS Y BARRA LATERAL -->
+        <div class="container py-5 seccion-blog">
+            <div class="row g-5">
+
+                <!-- Artículos -->
+                <div class="col-lg-8">
+
+                    <section id="alimentacion" class="mb-5">
+                        <h2><i class="bi bi-egg-fried" aria-hidden="true"></i> Alimentación</h2>
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+
+                            <div class="col">
+                                <article class="card tarjeta-blog h-100">
+                                    <img src="img/desayuno.jpg" class="card-img-top"
+                                        alt="Plato de desayuno saludable con avena, fruta y frutos secos" width="736"
+                                        height="736" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">5 desayunos saludables para empezar el día</h3>
+                                        <p class="small meta mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i>
+                                            <time datetime="2026-09-12">12 de septiembre de 2026</time> · Por el equipo
+                                            de HealthyFit</p>
+                                        <p class="card-text">Ideas rápidas y nutritivas para tener energía desde la
+                                            mañana sin complicarte.</p>
+                                        <div class="collapse" id="leer1">
+                                            <p>Un buen desayuno combina proteínas, fibra y grasas saludables. Prueba
+                                                avena con fruta y frutos secos, huevos con pan integral o yogur natural
+                                                con semillas.</p>
+                                            <p>Prepara lo que puedas la noche anterior: así ahorras tiempo y evitas
+                                                saltarte la primera comida del día.</p>
+                                        </div>
+                                        <button class="btn btn-marca-borde btn-sm" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#leer1" aria-expanded="false"
+                                            aria-controls="leer1">Leer más</button>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="card tarjeta-blog h-100">
+                                    <img src="img/mercado.jpg" class="card-img-top"
+                                        alt="Persona leyendo la etiqueta nutricional de un producto en el supermercado"
+                                        width="1080" height="1080" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">Cómo leer las etiquetas de los alimentos</h3>
+                                        <p class="small meta mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i>
+                                            <time datetime="2026-09-05">5 de septiembre de 2026</time> · Por el equipo
+                                            de HealthyFit</p>
+                                        <p class="card-text">Aprende a identificar azúcares, grasas y aditivos antes de
+                                            llenar tu carrito.</p>
+                                        <div class="collapse" id="leer2">
+                                            <p>Mira primero la lista de ingredientes: los primeros son los que están en
+                                                mayor cantidad. Si el azúcar aparece entre los primeros, conviene elegir
+                                                otra opción.</p>
+                                            <p>Compara siempre los valores por 100 g, no por porción, para que la
+                                                comparación sea justa entre productos.</p>
+                                        </div>
+                                        <button class="btn btn-marca-borde btn-sm" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#leer2" aria-expanded="false"
+                                            aria-controls="leer2">Leer más</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section id="ejercicio" class="mb-5">
+                        <h2><i class="bi bi-activity" aria-hidden="true"></i> Ejercicio</h2>
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+
+                            <div class="col">
+                                <article class="card tarjeta-blog h-100">
+                                    <img src="img/ejercicio-casa.jpg" class="card-img-top"
+                                        alt="Mujer haciendo ejercicios en casa sobre una colchoneta" width="1080"
+                                        height="1080" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">Rutina de 20 minutos para hacer en casa</h3>
+                                        <p class="small meta mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i>
+                                            <time datetime="2026-08-29">29 de agosto de 2026</time> · Por el equipo de
+                                            HealthyFit</p>
+                                        <p class="card-text">Una rutina completa, sin equipo y apta para principiantes.
+                                        </p>
+                                        <div class="collapse" id="leer3">
+                                            <p>Alterna 40 segundos de trabajo con 20 de descanso: sentadillas, planchas,
+                                                zancadas y flexiones apoyando las rodillas. Repite el circuito tres
+                                                veces.</p>
+                                            <p>Calienta cinco minutos antes y estira al terminar. La constancia importa
+                                                más que la intensidad.</p>
+                                        </div>
+                                        <button class="btn btn-marca-borde btn-sm" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#leer3" aria-expanded="false"
+                                            aria-controls="leer3">Leer más</button>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="card tarjeta-blog h-100">
+                                    <img src="img/entrenador-corrigiendo.jpg" class="card-img-top"
+                                        alt="Entrenador corrigiendo la postura de una persona en el gimnasio"
+                                        width="1200" height="1200" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">Errores comunes al empezar a entrenar</h3>
+                                        <p class="small meta mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i>
+                                            <time datetime="2026-08-22">22 de agosto de 2026</time> · Por el equipo de
+                                            HealthyFit</p>
+                                        <p class="card-text">Evita lesiones y desánimo con estos consejos para tus
+                                            primeras semanas.</p>
+                                        <div class="collapse" id="leer4">
+                                            <p>Querer hacerlo todo el primer día es el error más frecuente. Empieza con
+                                                poco y aumenta la carga de forma gradual.</p>
+                                            <p>Descuidar el calentamiento, la técnica y el descanso también aumenta el
+                                                riesgo de lesión. Si tienes dudas, pide orientación a un entrenador.</p>
+                                        </div>
+                                        <button class="btn btn-marca-borde btn-sm" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#leer4" aria-expanded="false"
+                                            aria-controls="leer4">Leer más</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section id="bienestar" class="mb-5">
+                        <h2><i class="bi bi-heart-pulse" aria-hidden="true"></i> Bienestar</h2>
+                        <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+
+                            <div class="col">
+                                <article class="card tarjeta-blog h-100">
+                                    <img src="img/dormitorio.jpg" class="card-img-top"
+                                        alt="Dormitorio tranquilo con luz tenue para descansar" width="1080"
+                                        height="941" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">Cómo dormir mejor: hábitos para un sueño reparador
+                                        </h3>
+                                        <p class="small meta mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i>
+                                            <time datetime="2026-08-15">15 de agosto de 2026</time> · Por el equipo de
+                                            HealthyFit</p>
+                                        <p class="card-text">Pequeños cambios en tu rutina nocturna que mejoran tu
+                                            descanso.</p>
+                                        <div class="collapse" id="leer5">
+                                            <p>Acuéstate y levántate a la misma hora todos los días y evita las
+                                                pantallas al menos una hora antes de dormir.</p>
+                                            <p>Mantén el cuarto oscuro y fresco, y evita la cafeína por la tarde. Dormir
+                                                bien también ayuda a tus resultados en el entrenamiento.</p>
+                                        </div>
+                                        <button class="btn btn-marca-borde btn-sm" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#leer5" aria-expanded="false"
+                                            aria-controls="leer5">Leer más</button>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="col">
+                                <article class="card tarjeta-blog h-100">
+                                    <img src="img/respiracion.jpg" class="card-img-top"
+                                        alt="Persona sentada practicando respiración consciente al aire libre"
+                                        width="680" height="600" loading="lazy">
+                                    <div class="card-body">
+                                        <h3 class="h5 card-title">Técnicas de respiración para reducir el estrés</h3>
+                                        <p class="small meta mb-2"><i class="bi bi-calendar3" aria-hidden="true"></i>
+                                            <time datetime="2026-08-08">8 de agosto de 2026</time> · Por el equipo de
+                                            HealthyFit</p>
+                                        <p class="card-text">Ejercicios sencillos que puedes hacer en cualquier lugar en
+                                            pocos minutos.</p>
+                                        <div class="collapse" id="leer6">
+                                            <p>Prueba la respiración 4-4-6: inhala contando hasta cuatro, sostén cuatro
+                                                segundos y exhala durante seis. Repite durante tres minutos.</p>
+                                            <p>Practicarla a diario ayuda a calmar la mente y a recuperar la
+                                                concentración en momentos de tensión.</p>
+                                        </div>
+                                        <button class="btn btn-marca-borde btn-sm" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#leer6" aria-expanded="false"
+                                            aria-controls="leer6">Leer más</button>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- Información complementaria -->
+                <aside class="col-lg-4">
+                    <div class="sticky-lg-top aside-blog">
+
+                        <div class="card tarjeta-valor mb-4">
+                            <div class="card-body">
+                                <h2 class="h5">Categorías</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#alimentacion">Alimentación</a>
+                                        <span class="badge rounded-pill">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#ejercicio">Ejercicio</a>
+                                        <span class="badge rounded-pill">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <a href="#bienestar">Bienestar</a>
+                                        <span class="badge rounded-pill">2</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card tarjeta-valor mb-4">
+                            <div class="card-body">
+                                <h2 class="h5">Consejos rápidos</h2>
+                                <ul class="list-unstyled consejos-rapidos mb-0">
+                                    <li class="mb-2"><i class="bi bi-droplet-half" aria-hidden="true"></i> <span>Toma al
+                                            menos 2 litros de agua al día.</span></li>
+                                    <li class="mb-2"><i class="bi bi-moon-stars" aria-hidden="true"></i> <span>Duerme
+                                            entre 7 y 8 horas.</span></li>
+                                    <li class="mb-2"><i class="bi bi-person-walking" aria-hidden="true"></i>
+                                        <span>Camina 30 minutos diarios.</span></li>
+                                    <li><i class="bi bi-basket" aria-hidden="true"></i> <span>Incluye frutas y verduras
+                                            en cada comida.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card tarjeta-valor text-center">
+                            <div class="card-body">
+                                <h2 class="h5">¿Tienes alguna duda?</h2>
+                                <p class="card-text">Nuestro equipo puede orientarte según tus objetivos.</p>
+                                <a href="contacto.html" class="btn btn-marca">Escríbenos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+
+        <!-- LLAMADO A LA ACCIÓN -->
+        <section id="empezar" class="cta-final py-5">
+            <div class="container">
+                <h2>¿Listo para empezar?</h2>
+                <p class="lead">Pon en práctica estos consejos con el acompañamiento de nuestro equipo.</p>
+                <a href="contacto.html" class="btn btn-claro btn-lg">Contáctanos</a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-center text-center">
+
+                <div class="col-12 col-md-4">
+                    <h3>Enlaces</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Contacto</h3>
+                    <p class="mb-1"><i class="bi bi-envelope" aria-hidden="true"></i> contacto@healthyfit.com</p>
+                    <p class="mb-1"><i class="bi bi-telephone" aria-hidden="true"></i> +51 900 000 000</p>
+                    <p class="mb-1"><i class="bi bi-geo-alt" aria-hidden="true"></i> Ica, Perú</p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Síguenos</h3>
+                    <div class="redes d-flex justify-content-center gap-2">
+                        <a href="#" class="fs-5" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-5" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-5" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="fs-5" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+            <p class="text-center mb-0">© 2026 HealthyFit. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cambia el texto del botón entre "Leer más" y "Leer menos" -->
+    <script>
+        document.querySelectorAll('.tarjeta-blog .collapse').forEach(function (panel) {
+            var boton = document.querySelector('[data-bs-target="#' + panel.id + '"]');
+            panel.addEventListener('shown.bs.collapse', function () {boton.textContent = 'Leer menos';});
+            panel.addEventListener('hidden.bs.collapse', function () {boton.textContent = 'Leer más';});
+        });
+    </script>
+</body>
+
+</html>  

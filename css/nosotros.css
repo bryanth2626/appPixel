@@ -1,0 +1,61 @@
+/* =========================================================
+   HEALTHYFIT · SOBRE NOSOTROS
+   ========================================================= */
+
+#historia img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.tarjeta-valor {
+    height: 100%;
+}
+
+.tarjeta-valor .bi {
+    color: var(--cian-txt);
+}
+
+/* HealthyFit en cifras */
+.cifras {
+    --bs-heading-color: #FFFFFF;
+    color: #FFFFFF;
+    text-align: center;
+    background: linear-gradient(135deg, #0B4B59 0%, #7A0E62 100%);
+}
+
+.cifra-numero {
+    margin-bottom: .25rem;
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #8FE6F0;
+}
+
+/* Equipo */
+.miembro-equipo {
+    height: 100%;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.miembro-equipo:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.miembro-equipo img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center top;
+    border: 4px solid var(--cian);
+}
+
+.rol-equipo {
+    margin-bottom: .5rem;
+    font-weight: 700;
+    color: var(--magenta-osc);
+}

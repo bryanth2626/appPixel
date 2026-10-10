@@ -1,0 +1,71 @@
+/* =========================================================
+   HEALTHYFIT · BLOG
+   ========================================================= */
+
+.seccion-blog h2 {
+    padding-bottom: .5rem;
+    border-bottom: 3px solid var(--cian);
+}
+
+.seccion-blog h2 i {
+    color: var(--magenta-osc);
+    margin-right: .25rem;
+}
+
+.tarjeta-blog {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tarjeta-blog:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.tarjeta-blog img {
+    height: 210px;
+    object-fit: cover;
+}
+
+.tarjeta-blog .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-blog .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.tarjeta-blog .collapse,
+.tarjeta-blog .collapsing {
+    margin-bottom: 1rem;
+}
+
+/* Barra lateral */
+.aside-blog {
+    top: 100px;
+    z-index: 1;
+}
+
+.aside-blog .list-group-item a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.aside-blog .list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.aside-blog .badge {
+    background-color: var(--magenta-osc);
+}
+
+.consejos-rapidos li {
+    display: flex;
+    gap: .6rem;
+}
+
+.consejos-rapidos i {
+    color: var(--cian-txt);
+    margin-top: .15rem;
+}
