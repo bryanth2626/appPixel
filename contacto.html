@@ -4,28 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Contáctanos para empezar tu plan de entrenamiento, nutrición y bienestar con HealthyFit. Escríbenos y te respondemos.">
-    <meta name="keywords" content="contacto, HealthyFit, entrenamiento, nutrición, bienestar, Ica">
+    <meta name="description" content="Contáctanos para empezar tu plan de entrenamiento, nutrición y bienestar con HealthyFit. Escríbenos y te respondemos.">
     <meta name="theme-color" content="#17BFD0">
     <title>Contacto | HealthyFit: Entrenamiento Personalizado, Nutrición y Bienestar</title>
+    <link rel="icon" type="image/png" href="logo/icono.png">
 
-    <link rel="icon" type="image/svg+xml" href="logo/logo_entregable_LISTO_1_-removebg-preview.png">
-
-    <!-- TIPOGRAFÍAS -->
+    <!-- Tipografías de Google Fonts: Fraunces (títulos) y Nunito Sans (texto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- BOOTSTRAP -->
+    <!-- Bootstrap (cuadrícula, botones, menú) e iconos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- ICONOS BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- ESTILOS PROPIOS: primero los generales, luego los de la página -->
+    <!-- Estilos propios: primero los generales y después los de esta página -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contacto.css">
 </head>
@@ -34,40 +27,25 @@
 
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
 
-    <!-- ENCABEZADO Y MENÚ -->
+    <!-- ===== MENÚ: queda fijo arriba (sticky-top) y en celular se pliega en el botón hamburguesa ===== -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg shadow-sm" aria-label="Menú principal">
             <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="logo/logo_entregable_LISTO_1_-removebg-preview.png" alt="HealthyFit, ir al inicio" width="184" height="45"></a>
 
-                <a class="navbar-brand" href="index.html">
-                    <img src="logo/logo_entregable_LISTO_1_-removebg-preview.png" alt="HealthyFit, ir al inicio" width="184" height="45">
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-
             </div>
         </nav>
     </header>
@@ -75,7 +53,7 @@
 
     <main id="contenido">
 
-        <!-- TÍTULO DE LA PÁGINA -->
+        <!-- ===== BANNER DE TÍTULO ===== -->
         <section class="encabezado-pagina py-5">
             <div class="container py-3">
                 <h1 class="display-5 fw-bold">Contacto</h1>
@@ -84,42 +62,34 @@
         </section>
 
 
-        <!-- FORMULARIO E INFORMACIÓN DE CONTACTO -->
+        <!-- ===== FORMULARIO (7 columnas) E INFORMACIÓN DE CONTACTO (5 columnas) ===== -->
         <section id="formulario" class="py-5">
             <div class="container">
                 <div class="row g-5">
 
-                    <!-- Formulario -->
+                    <!-- Formulario. data-netlify="true": solo envía mensajes si la página se publica en Netlify -->
                     <div class="col-lg-7">
                         <h2>Escríbenos</h2>
-                        <p>Completa el formulario y te responderemos lo antes posible. Los campos con <span
-                                class="campo-obligatorio" aria-hidden="true">*</span> son obligatorios.</p>
+                        <p>Completa el formulario y te responderemos lo antes posible. Los campos con <span class="campo-obligatorio" aria-hidden="true">*</span> son obligatorios.</p>
 
                         <form class="formulario-contacto" name="contacto" method="POST" data-netlify="true">
                             <input type="hidden" name="form-name" value="contacto">
 
+                            <!-- Datos personales (required = campo obligatorio; type="email" y pattern validan el formato) -->
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre completo <span class="campo-obligatorio"
-                                        aria-hidden="true">*</span></label>
-                                <input type="text" class="form-control" id="nombre" name="nombre"
-                                    placeholder="Escribe tu nombre completo" autocomplete="name" required>
+                                <label for="nombre" class="form-label">Nombre completo <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" autocomplete="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo electrónico <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Número de teléfono <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="900000000" pattern="[0-9]{9}" title="Escribe un número de 9 dígitos" inputmode="numeric" autocomplete="tel" required>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo electrónico <span
-                                        class="campo-obligatorio" aria-hidden="true">*</span></label>
-                                <input type="email" class="form-control" id="correo" name="correo"
-                                    placeholder="nombre@correo.com" autocomplete="email" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="telefono" class="form-label">Número de teléfono <span
-                                        class="campo-obligatorio" aria-hidden="true">*</span></label>
-                                <input type="tel" class="form-control" id="telefono" name="telefono"
-                                    placeholder="900000000" pattern="[0-9]{9}" title="Escribe un número de 9 dígitos"
-                                    inputmode="numeric" autocomplete="tel" required>
-                            </div>
-
+                            <!-- Lista desplegable -->
                             <div class="mb-3">
                                 <label for="servicio" class="form-label">Servicio de interés</label>
                                 <select class="form-select" id="servicio" name="servicio">
@@ -130,38 +100,33 @@
                                 </select>
                             </div>
 
+                            <!-- Botones de opción: solo se puede elegir uno -->
                             <fieldset class="mb-3">
                                 <legend class="form-label fs-6">Modalidad preferida</legend>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="modalidad" id="presencial"
-                                        value="presencial" checked>
+                                    <input class="form-check-input" type="radio" name="modalidad" id="presencial" value="presencial" checked>
                                     <label class="form-check-label" for="presencial">Presencial</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="modalidad" id="virtual"
-                                        value="virtual">
+                                    <input class="form-check-input" type="radio" name="modalidad" id="virtual" value="virtual">
                                     <label class="form-check-label" for="virtual">Virtual</label>
                                 </div>
                             </fieldset>
 
+                            <!-- Fecha (js/contacto.js impide elegir días pasados) -->
                             <div class="mb-3">
                                 <label for="fecha" class="form-label">Fecha preferida para tu primera evaluación</label>
                                 <input type="date" class="form-control" id="fecha" name="fecha">
                             </div>
 
+                            <!-- Mensaje y aceptación de datos -->
                             <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje <span class="campo-obligatorio"
-                                        aria-hidden="true">*</span></label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
-                                    placeholder="Escribe tu consulta aquí..." required></textarea>
+                                <label for="mensaje" class="form-label">Mensaje <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
                             </div>
-
                             <div class="form-check mb-4">
                                 <input class="form-check-input" type="checkbox" id="acepto" name="acepto" required>
-                                <label class="form-check-label" for="acepto">
-                                    Acepto que HealthyFit use mis datos para responder mi consulta. <span
-                                        class="campo-obligatorio" aria-hidden="true">*</span>
-                                </label>
+                                <label class="form-check-label" for="acepto">Acepto que HealthyFit use mis datos para responder mi consulta. <span class="campo-obligatorio" aria-hidden="true">*</span></label>
                             </div>
 
                             <div class="d-flex flex-wrap gap-2">
@@ -171,20 +136,16 @@
                         </form>
                     </div>
 
-                    <!-- Información de contacto -->
+                    <!-- Información de contacto: 3 tarjetas apiladas -->
                     <aside class="col-lg-5">
-
                         <div class="card tarjeta-valor info-contacto mb-4">
                             <div class="card-body">
                                 <h2 class="h5">Información de contacto</h2>
                                 <ul class="list-unstyled mb-0">
                                     <li class="mb-2"><i class="bi bi-geo-alt" aria-hidden="true"></i> Ica, Perú</li>
-                                    <li class="mb-2"><i class="bi bi-telephone" aria-hidden="true"></i> <a
-                                            href="tel:+51900000000">+51 900 000 000</a></li>
-                                    <li class="mb-2"><i class="bi bi-whatsapp" aria-hidden="true"></i> <a
-                                            href="https://wa.me/51900000000">Escríbenos por WhatsApp</a></li>
-                                    <li><i class="bi bi-envelope" aria-hidden="true"></i> <a
-                                            href="mailto:contacto@healthyfit.com">contacto@healthyfit.com</a></li>
+                                    <li class="mb-2"><i class="bi bi-telephone" aria-hidden="true"></i> <a href="tel:+51900000000">+51 900 000 000</a></li>
+                                    <li class="mb-2"><i class="bi bi-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/51900000000">Escríbenos por WhatsApp</a></li>
+                                    <li><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:contacto@healthyfit.com">contacto@healthyfit.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -193,10 +154,8 @@
                             <div class="card-body">
                                 <h2 class="h5">Horario de atención</h2>
                                 <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><i class="bi bi-clock" aria-hidden="true"></i> Lunes a viernes:
-                                        6:00 a.m. a 9:00 p.m.</li>
-                                    <li class="mb-2"><i class="bi bi-clock" aria-hidden="true"></i> Sábados: 7:00 a.m. a
-                                        2:00 p.m.</li>
+                                    <li class="mb-2"><i class="bi bi-clock" aria-hidden="true"></i> Lunes a viernes: 6:00 a.m. a 9:00 p.m.</li>
+                                    <li class="mb-2"><i class="bi bi-clock" aria-hidden="true"></i> Sábados: 7:00 a.m. a 2:00 p.m.</li>
                                     <li><i class="bi bi-x-circle" aria-hidden="true"></i> Domingos: cerrado</li>
                                 </ul>
                             </div>
@@ -206,18 +165,13 @@
                             <div class="card-body">
                                 <h2 class="h5">Síguenos</h2>
                                 <div class="redes">
-                                    <a href="#" class="fs-3 me-3" aria-label="Instagram"><i class="bi bi-instagram"
-                                            aria-hidden="true"></i></a>
-                                    <a href="#" class="fs-3 me-3" aria-label="Facebook"><i class="bi bi-facebook"
-                                            aria-hidden="true"></i></a>
-                                    <a href="#" class="fs-3 me-3" aria-label="YouTube"><i class="bi bi-youtube"
-                                            aria-hidden="true"></i></a>
-                                    <a href="#" class="fs-3" aria-label="WhatsApp"><i class="bi bi-whatsapp"
-                                            aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/healthyfit.pe/" class="fs-3 me-3" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://www.facebook.com/p/Healthy-Fit-61578308243487/" class="fs-3 me-3" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCa_a0Wi_1_X09AUdmTHmXrQ" class="fs-3 me-3" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                                    <a href="https://wa.link/umzv1d" class="fs-3" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
-
                     </aside>
 
                 </div>
@@ -225,14 +179,13 @@
         </section>
 
 
-        <!-- CÓMO EMPEZAR -->
+        <!-- ===== CÓMO EMPEZAR: 3 pasos numerados ===== -->
         <section id="como-empezar" class="py-5 fondo-suave">
             <div class="container py-3">
                 <h2 class="titulo-seccion">¿Cómo empezar?</h2>
                 <p class="subtitulo-seccion mt-3">Tres pasos sencillos para comenzar tu cambio.</p>
 
                 <div class="row g-4 text-center">
-
                     <div class="col-md-4">
                         <article class="paso">
                             <span class="paso-numero">1</span>
@@ -245,8 +198,7 @@
                         <article class="paso">
                             <span class="paso-numero">2</span>
                             <h3 class="h5 mt-3">Evaluación inicial</h3>
-                            <p class="mb-0">Coordinamos una primera cita para conocer tu nivel, tus hábitos y tus metas.
-                            </p>
+                            <p class="mb-0">Coordinamos una primera cita para conocer tu nivel, tus hábitos y tus metas.</p>
                         </article>
                     </div>
 
@@ -254,22 +206,18 @@
                         <article class="paso">
                             <span class="paso-numero">3</span>
                             <h3 class="h5 mt-3">Tu plan personalizado</h3>
-                            <p class="mb-0">Recibes tu plan de entrenamiento, nutrición y bienestar, con seguimiento
-                                constante.</p>
+                            <p class="mb-0">Recibes tu plan de entrenamiento, nutrición y bienestar, con seguimiento constante.</p>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
 
-
-    <!-- PIE DE PÁGINA -->
+    <!-- ===== PIE DE PÁGINA: 3 columnas (enlaces, contacto, redes) ===== -->
     <footer class="pie py-5">
         <div class="container">
             <div class="row g-4 justify-content-center text-center">
-
                 <div class="col-12 col-md-4">
                     <h3>Enlaces</h3>
                     <ul class="list-unstyled">
@@ -280,14 +228,12 @@
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-
                 <div class="col-12 col-md-4">
                     <h3>Contacto</h3>
                     <p class="mb-1"><i class="bi bi-envelope" aria-hidden="true"></i> contacto@healthyfit.com</p>
                     <p class="mb-1"><i class="bi bi-telephone" aria-hidden="true"></i> +51 900 000 000</p>
                     <p class="mb-1"><i class="bi bi-geo-alt" aria-hidden="true"></i> Ica, Perú</p>
                 </div>
-
                 <div class="col-12 col-md-4">
                     <h3>Síguenos</h3>
                     <div class="redes d-flex justify-content-center gap-2">
@@ -297,27 +243,17 @@
                         <a href="#" class="fs-5" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
                     </div>
                 </div>
-
             </div>
-
             <hr class="my-4">
             <p class="text-center mb-0">© 2026 HealthyFit. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-
-    <!-- SCRIPT DE BOOTSTRAP -->
+    <!-- Bootstrap JS: hace funcionar el menú hamburguesa, el acordeón y los botones "Leer más" -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Código propio de esta página (carpeta js/) -->
+    <script src="js/contacto.js"></script>
 
-    <!-- No permite elegir fechas pasadas para la primera evaluación -->
-    <script>
-        (function () {
-            var campo = document.getElementById('fecha');
-            var hoy = new Date();
-            hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
-            campo.min = hoy.toISOString().split('T')[0];
-        })();
-    </script>
 </body>
 
 </html>

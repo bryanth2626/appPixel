@@ -1,19 +1,16 @@
-/* =========================================================
-   HEALTHYFIT · ESTILOS GENERALES
-   Se carga en TODAS las páginas, antes del CSS propio de cada una.
-   Contenido:
-   1. Variables y base
-   2. Menú (navbar)
-   3. Botones
-   4. Encabezado de página, secciones y llamado a la acción
-   5. Tarjetas e iconos
-   6. Pie de página
-   7. Accesibilidad y movimiento reducido
-   ========================================================= */
+/* =====================================================
+   HEALTHYFIT · ESTILOS GENERALES (se cargan en TODAS las páginas)
+   Índice:  1. Colores y base   2. Menú   3. Botones
+            4. Encabezado, títulos y llamado a la acción
+            5. Tarjetas e iconos   6. Imagen destacada
+            7. Pie de página   8. Accesibilidad
+   ===================================================== */
 
-/* ---------- 1. VARIABLES Y BASE ---------- */
+
+/* ---------- 1. COLORES Y BASE ----------
+   Aquí se definen los colores UNA sola vez; en el resto del CSS se usan con var(--nombre).
+   Si quieres cambiar la paleta, solo cambias estos valores. */
 :root {
-    /* Colores de la marca (logo: cian y magenta) */
     --magenta: #D51AA8;
     --magenta-osc: #AF1288;
     --magenta-prof: #8A0E6C;
@@ -22,197 +19,145 @@
     --cian-txt: #05697B;
     --cian-suave: #E3F8FA;
     --rosa-suave: #FCE8F7;
-
-    /* Neutros */
     --texto: #263238;
     --texto-suave: #52626B;
-    --fondo: #FFFFFF;
     --oscuro: #16242B;
+    --radio: 16px;                                         /* esquinas redondeadas */
+    --sombra: 0 8px 24px rgba(22, 36, 43, .08);            /* sombra suave */
+    --sombra-fuerte: 0 14px 32px rgba(22, 36, 43, .16);    /* sombra al pasar el mouse */
 
-    /* Detalles */
-    --radio: 16px;
-    --sombra: 0 8px 24px rgba(22, 36, 43, .08);
-    --sombra-fuerte: 0 14px 32px rgba(22, 36, 43, .16);
-
-    /* Ajustes de Bootstrap con los colores de la marca */
+    /* Le decimos a Bootstrap que use nuestros colores */
     --bs-body-color: var(--texto);
     --bs-heading-color: var(--oscuro);
     --bs-link-color: var(--magenta-osc);
     --bs-link-hover-color: var(--magenta-prof);
 }
 
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }      /* al pulsar un enlace interno, baja suavemente */
+section { scroll-margin-top: 90px; }   /* deja espacio para que el menú fijo no tape el título */
 
 body {
-    margin: 0;
-    font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+    font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;   /* letra del texto */
     font-size: 1.05rem;
     line-height: 1.65;
-    color: var(--texto);
-    background: var(--fondo);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Fraunces", Georgia, serif;
+    font-family: "Fraunces", Georgia, serif;                      /* letra de los títulos */
     font-weight: 700;
     line-height: 1.2;
 }
 
-img, video {
-    max-width: 100%;
-    height: auto;
-}
+img, video { max-width: 100%; height: auto; }   /* las imágenes nunca se salen de su caja */
+.meta { color: var(--texto-suave); }            /* texto gris (fechas del blog) */
 
-section {
-    scroll-margin-top: 90px;
-}
+/* Fondos que alternan entre secciones */
+.fondo-suave { background-color: #F3FBFC; }        /* celeste muy claro */
+.servicio-alterno { background-color: var(--rosa-suave); }   /* rosa claro */
 
-.meta {
-    color: var(--texto-suave);
-}
-
-/* Fondos de sección */
-.fondo-suave {
-    background-color: #F3FBFC;
-}
-
-.servicio-alterno {
-    background-color: var(--rosa-suave);
-}
 
 /* ---------- 2. MENÚ ---------- */
 .navbar {
-    background-color: #FFFFFF;
+    background-color: #fff;
     border-bottom: 4px solid var(--cian);
-    padding-top: .6rem;
-    padding-bottom: .6rem;
+    padding: .6rem 0;
 }
-
-.navbar .navbar-brand img {
-    height: 45px;
-    width: auto;
-}
+.navbar .navbar-brand img { height: 45px; width: auto; }   /* tamaño del logo */
 
 .navbar .nav-link {
     color: var(--texto);
     font-weight: 700;
     padding: .5rem 1rem;
-    border-radius: 999px;
-    transition: color .2s ease, background-color .2s ease;
+    border-radius: 999px;                                  /* forma de píldora */
+    transition: color .2s, background-color .2s;
 }
-
 .navbar .nav-link:hover,
-.navbar .nav-link:focus-visible {
-    color: var(--magenta-osc);
-    background-color: var(--rosa-suave);
+.navbar .nav-link:focus-visible { color: var(--magenta-osc); background-color: var(--rosa-suave); }
+.navbar .nav-link.active { color: #fff; background-color: var(--magenta-osc); }   /* página actual */
+
+.navbar-toggler { border-color: var(--cian-osc); }                          /* botón hamburguesa */
+.navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(23, 191, 208, .35); }
+
+@media (max-width: 991.98px) {                             /* en celular: espacio entre enlaces */
+    .navbar .navbar-nav { padding-top: .75rem; gap: .25rem; }
 }
 
-.navbar .nav-link.active {
-    color: #FFFFFF;
-    background-color: var(--magenta-osc);
-}
 
-.navbar-toggler {
-    border-color: var(--cian-osc);
-}
+/* ---------- 3. BOTONES ----------
+   Todos tienen forma de píldora. Cada variante cambia solo sus colores
+   (las variables --bs-btn-... son las que usa Bootstrap). */
+.btn { font-weight: 700; border-radius: 999px; padding: .6rem 1.5rem; }
+.btn-lg { padding: .8rem 2rem; }
+.btn-sm { padding: .35rem 1rem; }
 
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(23, 191, 208, .35);
-}
-
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav {
-        padding-top: .75rem;
-        gap: .25rem;
-    }
-}
-
-/* ---------- 3. BOTONES ---------- */
-.btn {
-    font-weight: 700;
-    border-radius: 999px;
-    padding: .6rem 1.5rem;
-}
-
-.btn-lg {
-    padding: .8rem 2rem;
-}
-
-.btn-sm {
-    padding: .35rem 1rem;
-}
-
-/* Botón principal (magenta) */
+/* btn-marca: botón principal, magenta */
 .btn-marca {
-    --bs-btn-color: #FFFFFF;
+    --bs-btn-color: #fff;
     --bs-btn-bg: var(--magenta-osc);
     --bs-btn-border-color: var(--magenta-osc);
-    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: var(--magenta-prof);
     --bs-btn-hover-border-color: var(--magenta-prof);
-    --bs-btn-focus-shadow-rgb: 213, 26, 168;
-    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--magenta-prof);
     --bs-btn-active-border-color: var(--magenta-prof);
+    --bs-btn-focus-shadow-rgb: 213, 26, 168;
 }
 
-/* Botón secundario con borde (cian) */
+/* btn-marca-borde: botón secundario, solo borde cian */
 .btn-marca-borde {
     --bs-btn-color: var(--cian-txt);
     --bs-btn-bg: transparent;
     --bs-btn-border-color: var(--cian-osc);
-    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: var(--cian-txt);
     --bs-btn-hover-border-color: var(--cian-txt);
-    --bs-btn-focus-shadow-rgb: 23, 191, 208;
-    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--cian-txt);
     --bs-btn-active-border-color: var(--cian-txt);
+    --bs-btn-focus-shadow-rgb: 23, 191, 208;
     border-width: 2px;
 }
 
-/* Botón claro para fondos de color */
+/* btn-claro: blanco, para usar sobre fondos de color (llamado a la acción) */
 .btn-claro {
     --bs-btn-color: var(--magenta-prof);
-    --bs-btn-bg: #FFFFFF;
-    --bs-btn-border-color: #FFFFFF;
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: #fff;
     --bs-btn-hover-color: var(--magenta-prof);
     --bs-btn-hover-bg: var(--cian-suave);
     --bs-btn-hover-border-color: var(--cian-suave);
-    --bs-btn-focus-shadow-rgb: 255, 255, 255;
     --bs-btn-active-color: var(--magenta-prof);
     --bs-btn-active-bg: var(--cian-suave);
     --bs-btn-active-border-color: var(--cian-suave);
+    --bs-btn-focus-shadow-rgb: 255, 255, 255;
 }
 
-/* Botón con borde blanco para fondos oscuros */
+/* btn-borde-claro: transparente con borde blanco, para la portada oscura */
 .btn-borde-claro {
-    --bs-btn-color: #FFFFFF;
+    --bs-btn-color: #fff;
     --bs-btn-bg: transparent;
-    --bs-btn-border-color: #FFFFFF;
+    --bs-btn-border-color: #fff;
     --bs-btn-hover-color: var(--oscuro);
-    --bs-btn-hover-bg: #FFFFFF;
-    --bs-btn-hover-border-color: #FFFFFF;
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #fff;
     --bs-btn-focus-shadow-rgb: 255, 255, 255;
     border-width: 2px;
 }
 
-/* ---------- 4. ENCABEZADO DE PÁGINA, SECCIONES Y CTA ---------- */
+
+/* ---------- 4. ENCABEZADO, TÍTULOS Y LLAMADO A LA ACCIÓN ---------- */
+
+/* Banner de color con el título de cada página interna */
 .encabezado-pagina {
-    --bs-heading-color: #FFFFFF;
+    --bs-heading-color: #fff;
     position: relative;
     overflow: hidden;
-    color: #FFFFFF;
+    color: #fff;
     text-align: center;
-    background: linear-gradient(135deg, #066B7D 0%, #A00F7C 100%);
+    background: linear-gradient(135deg, #066B7D, #A00F7C);   /* degradado cian → magenta */
 }
-
+/* Los dos círculos transparentes decorativos del banner */
 .encabezado-pagina::before,
 .encabezado-pagina::after {
     content: "";
@@ -221,37 +166,13 @@ section {
     background: rgba(255, 255, 255, .08);
     pointer-events: none;
 }
+.encabezado-pagina::before { width: 280px; height: 280px; top: -120px; left: -80px; }
+.encabezado-pagina::after  { width: 200px; height: 200px; bottom: -90px; right: 6%; }
+.encabezado-pagina .container { position: relative; z-index: 1; }   /* el texto queda sobre los círculos */
+.encabezado-pagina .lead { max-width: 640px; margin: 0 auto; }
 
-.encabezado-pagina::before {
-    width: 280px;
-    height: 280px;
-    top: -120px;
-    left: -80px;
-}
-
-.encabezado-pagina::after {
-    width: 200px;
-    height: 200px;
-    bottom: -90px;
-    right: 6%;
-}
-
-.encabezado-pagina .container {
-    position: relative;
-    z-index: 1;
-}
-
-.encabezado-pagina .lead {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.titulo-seccion {
-    text-align: center;
-    margin-bottom: .5rem;
-}
-
+/* Título de sección con la rayita de colores debajo */
+.titulo-seccion { text-align: center; margin-bottom: .5rem; }
 .titulo-seccion::after {
     content: "";
     display: block;
@@ -261,21 +182,16 @@ section {
     border-radius: 4px;
     background: linear-gradient(90deg, var(--cian), var(--magenta));
 }
+.subtitulo-seccion { text-align: center; color: var(--texto-suave); max-width: 640px; margin: 0 auto 3rem; }
 
-.subtitulo-seccion {
-    text-align: center;
-    color: var(--texto-suave);
-    max-width: 640px;
-    margin: 0 auto 3rem;
-}
-
-/* Llamado a la acción */
+/* Franja final "¿Listo para empezar?" */
 .cta-final {
-    --bs-heading-color: #FFFFFF;
-    color: #FFFFFF;
+    --bs-heading-color: #fff;
+    color: #fff;
     text-align: center;
-    background: linear-gradient(135deg, var(--magenta-osc) 0%, var(--cian-txt) 100%);
+    background: linear-gradient(135deg, var(--magenta-osc), var(--cian-txt));
 }
+
 
 /* ---------- 5. TARJETAS E ICONOS ---------- */
 .card {
@@ -285,10 +201,7 @@ section {
     box-shadow: var(--sombra);
 }
 
-.tarjeta-valor {
-    border-radius: var(--radio);
-}
-
+/* Círculo con icono (servicios, misión, valores). Con la clase "magenta" cambia de color */
 .icono-circulo {
     display: inline-flex;
     align-items: center;
@@ -300,46 +213,40 @@ section {
     color: var(--cian-txt);
     background-color: var(--cian-suave);
 }
+.icono-circulo.magenta { color: var(--magenta-osc); background-color: var(--rosa-suave); }
 
-.icono-circulo.magenta {
-    color: var(--magenta-osc);
-    background-color: var(--rosa-suave);
+
+/* ---------- 6. IMAGEN DESTACADA ----------
+   Misma foto grande con bordes redondeados en Servicios y Sobre Nosotros */
+.img-destacada {
+    width: 100%;
+    aspect-ratio: 16 / 10;       /* todas las fotos con la misma proporción */
+    object-fit: cover;           /* recorta la foto sin deformarla */
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-fuerte);
 }
 
-/* ---------- 6. PIE DE PÁGINA ---------- */
+
+/* ---------- 7. PIE DE PÁGINA ---------- */
 .pie {
-    --bs-heading-color: #FFFFFF;
+    --bs-heading-color: #fff;
     color: #D5E2E7;
     background-color: var(--oscuro);
     border-top: 4px solid var(--magenta);
 }
-
-.pie img {
-    height: 45px;
-    width: auto;
-}
-
-.pie h3 {
+.pie h3 {                                   /* títulos pequeños en mayúsculas */
     font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: .06em;
     text-transform: uppercase;
-    color: #FFFFFF;
 }
-
-.pie a {
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color .2s ease;
-}
-
+.pie a { color: #fff; text-decoration: none; transition: color .2s; }
 .pie a:hover,
-.pie a:focus-visible {
-    color: #8FE6F0;
-    text-decoration: underline;
-}
+.pie a:focus-visible { color: #8FE6F0; text-decoration: underline; }
+.pie hr { border-color: rgba(255, 255, 255, .25); opacity: 1; }
 
+/* Botones redondos de redes sociales */
 .pie .redes a {
     display: inline-flex;
     align-items: center;
@@ -350,27 +257,16 @@ section {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, .1);
     text-decoration: none;
-    transition: background-color .2s ease, transform .2s ease;
+    transition: background-color .2s, transform .2s;
 }
-
 .pie .redes a:hover,
-.pie .redes a:focus-visible {
-    background-color: var(--magenta-osc);
-    color: #FFFFFF;
-    transform: translateY(-2px);
-}
+.pie .redes a:focus-visible { background-color: var(--magenta-osc); transform: translateY(-2px); }
 
-.pie hr {
-    border-color: rgba(255, 255, 255, .25);
-    opacity: 1;
-}
 
-/* ---------- 7. ACCESIBILIDAD Y MOVIMIENTO REDUCIDO ---------- */
-:focus-visible {
-    outline: 3px solid var(--cian);
-    outline-offset: 2px;
-}
+/* ---------- 8. ACCESIBILIDAD ---------- */
+:focus-visible { outline: 3px solid var(--cian); outline-offset: 2px; }   /* borde al navegar con teclado */
 
+/* Enlace "Saltar al contenido": invisible hasta que se enfoca con la tecla Tab */
 .salto-contenido {
     position: absolute;
     left: 1rem;
@@ -379,29 +275,16 @@ section {
     padding: .6rem 1rem;
     border-radius: 8px;
     background: var(--magenta-prof);
-    color: #FFFFFF;
+    color: #fff;
     font-weight: 700;
-    transition: top .2s ease;
+    transition: top .2s;
 }
+.salto-contenido:focus { top: 1rem; color: #fff; }
 
-.salto-contenido:focus {
-    top: 1rem;
-    color: #FFFFFF;
-}
+@media (max-width: 576px) { body { font-size: 1rem; } }   /* letra un poco menor en celular */
 
-@media (max-width: 576px) {
-    body {
-        font-size: 1rem;
-    }
-}
-
+/* Si la persona desactivó las animaciones en su sistema, las quitamos */
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *, *::before, *::after {
-        transition: none !important;
-        animation: none !important;
-    }
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
 }

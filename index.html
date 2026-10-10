@@ -4,28 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Descubre HealthyFit, un espacio dedicado al entrenamiento personalizado, la nutrición saludable y el bienestar para mejorar tu calidad de vida.">
-    <meta name="keywords" content="entrenamiento personalizado, nutrición, bienestar, vida saludable, HealthyFit">
+    <meta name="description" content="Descubre HealthyFit, un espacio dedicado al entrenamiento personalizado, la nutrición saludable y el bienestar para mejorar tu calidad de vida.">
     <meta name="theme-color" content="#17BFD0">
     <title>HealthyFit | Entrenamiento Personalizado, Nutrición y Bienestar</title>
+    <link rel="icon" type="image/png" href="logo/icono.png">
 
-    <link rel="icon" type="image/svg+xml" href="logo/icono.png">
-
-    <!-- TIPOGRAFÍAS -->
+    <!-- Tipografías de Google Fonts: Fraunces (títulos) y Nunito Sans (texto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- BOOTSTRAP -->
+    <!-- Bootstrap (cuadrícula, botones, menú) e iconos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- ICONOS BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <!-- ESTILOS PROPIOS: primero los generales, luego los de la página -->
+    <!-- Estilos propios: primero los generales y después los de esta página -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/inicio.css">
 </head>
@@ -34,40 +27,25 @@
 
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
 
-    <!-- ENCABEZADO Y MENÚ -->
+    <!-- ===== MENÚ: queda fijo arriba (sticky-top) y en celular se pliega en el botón hamburguesa ===== -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg shadow-sm" aria-label="Menú principal">
             <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="logo/logo_entregable_LISTO_1_-removebg-preview.png" alt="HealthyFit, ir al inicio" width="184" height="45"></a>
 
-                <a class="navbar-brand" href="index.html">
-                    <img src="logo/logo_entregable_LISTO_1_-removebg-preview.png" alt="HealthyFit, ir al inicio" width="184" height="45">
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-
             </div>
         </nav>
     </header>
@@ -75,17 +53,14 @@
 
     <main id="contenido">
 
-        <!-- 1. PORTADA -->
+        <!-- ===== 1. PORTADA: foto de fondo, título y dos botones ===== -->
         <section id="portada" class="portada">
-            <img src="img/portada.jpg" class="portada-img"
-                alt="Personas entrenando en un gimnasio con un entrenador personal" width="1600" height="901"
-                fetchpriority="high">
+            <img src="img/portada.jpg" class="portada-img" alt="Personas entrenando en un gimnasio con un entrenador personal" width="1600" height="901" fetchpriority="high">
             <div class="container portada-texto">
                 <div class="contenido">
                     <span class="portada-etiqueta">Entrenamiento · Nutrición · Bienestar</span>
                     <h1 class="fw-bold">Tu bienestar comienza aquí</h1>
-                    <p class="lead mb-4">Entrenamiento personalizado, nutrición saludable y bienestar para mejorar tu
-                        calidad de vida.</p>
+                    <p class="lead mb-4">Entrenamiento personalizado, nutrición saludable y bienestar para mejorar tu calidad de vida.</p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
                         <a href="servicios.html" class="btn btn-marca btn-lg">Conocer servicios</a>
                         <a href="contacto.html" class="btn btn-borde-claro btn-lg">Contáctanos</a>
@@ -95,21 +70,19 @@
         </section>
 
 
-        <!-- 2. SERVICIOS DESTACADOS -->
+        <!-- ===== 2. SERVICIOS DESTACADOS: 3 tarjetas (col-md-4 = 3 por fila en pantalla mediana/grande) ===== -->
         <section id="servicios" class="py-5">
             <div class="container py-3">
                 <h2 class="titulo-seccion">Nuestros servicios</h2>
                 <p class="subtitulo-seccion mt-3">Todo lo que necesitas para sentirte bien por dentro y por fuera.</p>
 
                 <div class="row g-4">
-
                     <div class="col-md-4">
                         <article class="card tarjeta-servicio h-100 text-center">
                             <div class="card-body p-4">
                                 <span class="icono-circulo"><i class="bi bi-activity" aria-hidden="true"></i></span>
                                 <h3 class="card-title h4 mt-3">Entrenamiento personalizado</h3>
-                                <p class="card-text">Rutinas diseñadas según tu objetivo, tu nivel y el tiempo que
-                                    tienes disponible.</p>
+                                <p class="card-text">Rutinas diseñadas según tu objetivo, tu nivel y el tiempo que tienes disponible.</p>
                                 <a href="servicios.html#entrenamiento" class="btn btn-marca-borde btn-sm">Ver más</a>
                             </div>
                         </article>
@@ -118,11 +91,9 @@
                     <div class="col-md-4">
                         <article class="card tarjeta-servicio h-100 text-center">
                             <div class="card-body p-4">
-                                <span class="icono-circulo magenta"><i class="bi bi-egg-fried"
-                                        aria-hidden="true"></i></span>
+                                <span class="icono-circulo magenta"><i class="bi bi-egg-fried" aria-hidden="true"></i></span>
                                 <h3 class="card-title h4 mt-3">Nutrición</h3>
-                                <p class="card-text">Planes de alimentación saludables y fáciles de seguir, con asesoría
-                                    profesional.</p>
+                                <p class="card-text">Planes de alimentación saludables y fáciles de seguir, con asesoría profesional.</p>
                                 <a href="servicios.html#nutricion" class="btn btn-marca-borde btn-sm">Ver más</a>
                             </div>
                         </article>
@@ -133,26 +104,23 @@
                             <div class="card-body p-4">
                                 <span class="icono-circulo"><i class="bi bi-heart-pulse" aria-hidden="true"></i></span>
                                 <h3 class="card-title h4 mt-3">Bienestar</h3>
-                                <p class="card-text">Hábitos, descanso y equilibrio emocional para cuidar tu salud de
-                                    forma integral.</p>
+                                <p class="card-text">Hábitos, descanso y equilibrio emocional para cuidar tu salud de forma integral.</p>
                                 <a href="servicios.html#bienestar" class="btn btn-marca-borde btn-sm">Ver más</a>
                             </div>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
 
 
-        <!-- 3. VIDEO Y AUDIO -->
+        <!-- ===== 3. VIDEO Y AUDIO: video a la izquierda (8 columnas) y audios a la derecha (4 columnas) ===== -->
         <section id="multimedia" class="py-5 fondo-suave">
             <div class="container py-3">
                 <h2 class="titulo-seccion mb-5">Vive la experiencia HealthyFit</h2>
 
                 <div class="row g-4">
-
-                    <!-- Video -->
+                    <!-- Video (la clase ratio-16x9 mantiene la proporción del video) -->
                     <div class="col-lg-8">
                         <h3 class="h4">Rutina de 10 minutos</h3>
                         <p>Mira una demostración de ejercicios que puedes hacer en casa.</p>
@@ -168,9 +136,7 @@
                     <aside class="col-lg-4">
                         <div class="card h-100 lista-audios">
                             <div class="card-body p-4">
-                                <h3 class="h4"><i class="bi bi-headphones" aria-hidden="true"></i> Audios para tu
-                                    bienestar</h3>
-
+                                <h3 class="h4"><i class="bi bi-headphones" aria-hidden="true"></i> Audios para tu bienestar</h3>
                                 <p class="mb-1 mt-4 fw-bold">Consejos de nutrición</p>
                                 <audio controls preload="none" class="w-100">
                                     <source src="audios/consejos-alimentacion.mp3" type="audio/mpeg">
@@ -182,47 +148,37 @@
                                     <source src="audios/rutina-principiantes.mp3" type="audio/mpeg">
                                     Tu navegador no admite audio HTML5.
                                 </audio>
+
                                 <p class="mb-1 mt-4 fw-bold">Malos hábitos vs Hábitos</p>
                                 <audio controls preload="none" class="w-100">
                                     <source src="audios/Malos hábitos vs. Hábitos Saludables [j5eN-hTJGM0].mp3" type="audio/mpeg">
                                     Tu navegador no admite audio HTML5.
                                 </audio>
-
                             </div>
                         </div>
                     </aside>
-
                 </div>
             </div>
         </section>
 
 
-        <!-- 4. TESTIMONIOS -->
+        <!-- ===== 4. TESTIMONIOS: 3 opiniones de clientes (las dos primeras con foto, la tercera con iniciales) ===== -->
         <section id="testimonios" class="py-5">
             <div class="container py-3">
                 <h2 class="titulo-seccion mb-5">Lo que dicen nuestros clientes</h2>
 
                 <div class="row g-4">
-
                     <div class="col-md-4">
                         <article class="card testimonio h-100">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="img/clienta-mujer.jpg" alt="Foto de Carla Mendoza, clienta de HealthyFit"
-                                        class="testimonio-foto rounded-circle me-3" width="60" height="60"
-                                        loading="lazy">
+                                    <img src="img/clienta-mujer.jpg" alt="Foto de Carla Mendoza, clienta de HealthyFit" class="testimonio-foto rounded-circle me-3" width="60" height="60" loading="lazy">
                                     <div>
                                         <h3 class="h6 mb-0">Carla Mendoza</h3>
-                                        <span class="estrellas" role="img" aria-label="5 de 5 estrellas"><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i></span>
+                                        <span class="estrellas" role="img" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
                                     </div>
                                 </div>
-                                <blockquote class="mb-0">“Con mi entrenador personalizado logré bajar de peso y ahora
-                                    tengo mucha más energía todos los días.”</blockquote>
+                                <blockquote class="mb-0">“Con mi entrenador personalizado logré bajar de peso y ahora tengo mucha más energía todos los días.”</blockquote>
                             </div>
                         </article>
                     </div>
@@ -231,21 +187,13 @@
                         <article class="card testimonio h-100">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="img/cliente-hombre.jpg" alt="Foto de Luis Ramírez, cliente de HealthyFit"
-                                        class="testimonio-foto rounded-circle me-3" width="60" height="60"
-                                        loading="lazy">
+                                    <img src="img/cliente-hombre.jpg" alt="Foto de Luis Ramírez, cliente de HealthyFit" class="testimonio-foto rounded-circle me-3" width="60" height="60" loading="lazy">
                                     <div>
                                         <h3 class="h6 mb-0">Luis Ramírez</h3>
-                                        <span class="estrellas" role="img" aria-label="5 de 5 estrellas"><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i></span>
+                                        <span class="estrellas" role="img" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
                                     </div>
                                 </div>
-                                <blockquote class="mb-0">“El plan de nutrición fue fácil de seguir y me enseñó a comer
-                                    mejor sin dejar mis comidas favoritas.”</blockquote>
+                                <blockquote class="mb-0">“El plan de nutrición fue fácil de seguir y me enseñó a comer mejor sin dejar mis comidas favoritas.”</blockquote>
                             </div>
                         </article>
                     </div>
@@ -257,26 +205,18 @@
                                     <span class="testimonio-iniciales me-3" aria-hidden="true">AT</span>
                                     <div>
                                         <h3 class="h6 mb-0">Ana Torres</h3>
-                                        <span class="estrellas" role="img" aria-label="5 de 5 estrellas"><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i><i
-                                                class="bi bi-star-fill" aria-hidden="true"></i></span>
+                                        <span class="estrellas" role="img" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
                                     </div>
                                 </div>
-                                <blockquote class="mb-0">“Los consejos de bienestar me ayudaron a dormir mejor y a
-                                    manejar el estrés. ¡Los recomiendo!”</blockquote>
+                                <blockquote class="mb-0">“Los consejos de bienestar me ayudaron a dormir mejor y a manejar el estrés. ¡Los recomiendo!”</blockquote>
                             </div>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
 
-
-        <!-- LLAMADO A LA ACCIÓN -->
+        <!-- ===== LLAMADO A LA ACCIÓN (franja de color con botón) ===== -->
         <section id="empezar" class="cta-final py-5">
             <div class="container">
                 <h2>¿Listo para empezar?</h2>
@@ -286,12 +226,10 @@
         </section>
     </main>
 
-
-    <!-- PIE DE PÁGINA -->
+    <!-- ===== PIE DE PÁGINA: 3 columnas (enlaces, contacto, redes) ===== -->
     <footer class="pie py-5">
         <div class="container">
             <div class="row g-4 justify-content-center text-center">
-
                 <div class="col-12 col-md-4">
                     <h3>Enlaces</h3>
                     <ul class="list-unstyled">
@@ -302,32 +240,28 @@
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-
                 <div class="col-12 col-md-4">
                     <h3>Contacto</h3>
                     <p class="mb-1"><i class="bi bi-envelope" aria-hidden="true"></i> contacto@healthyfit.com</p>
                     <p class="mb-1"><i class="bi bi-telephone" aria-hidden="true"></i> +51 900 000 000</p>
                     <p class="mb-1"><i class="bi bi-geo-alt" aria-hidden="true"></i> Ica, Perú</p>
                 </div>
-
                 <div class="col-12 col-md-4">
                     <h3>Síguenos</h3>
                     <div class="redes d-flex justify-content-center gap-2">
-                        <a href="#" class="fs-5" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-                        <a href="#" class="fs-5" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-                        <a href="#" class="fs-5" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
-                        <a href="#" class="fs-5" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/healthyfit.pe/" class="fs-5" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/p/Healthy-Fit-61578308243487/" class="fs-5" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/channel/UCa_a0Wi_1_X09AUdmTHmXrQ" class="fs-5" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+                        <a href="https://wa.link/umzv1d" class="fs-5" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
                     </div>
                 </div>
-
             </div>
-
             <hr class="my-4">
             <p class="text-center mb-0">© 2026 HealthyFit. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- SCRIPT DE BOOTSTRAP -->
+    <!-- Bootstrap JS: hace funcionar el menú hamburguesa, el acordeón y los botones "Leer más" -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

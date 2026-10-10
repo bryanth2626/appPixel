@@ -1,81 +1,48 @@
-/* =========================================================
-   HEALTHYFIT · CONTACTO
-   ========================================================= */
+/* =====================================================
+   HEALTHYFIT · CONTACTO (contacto.html)
+   Índice: 1. Formulario   2. Tarjetas de información   3. Cómo empezar (pasos)
+   ===================================================== */
 
-/* Formulario */
-.formulario-contacto {
+
+/* ---------- 1. FORMULARIO ---------- */
+.formulario-contacto {                         /* la caja blanca que rodea el formulario */
     padding: 2rem;
     border: 1px solid #D6EEF1;
     border-radius: var(--radio);
-    background-color: #FFFFFF;
+    background-color: #fff;
     box-shadow: var(--sombra);
 }
-
 .formulario-contacto .form-label,
-.formulario-contacto legend {
-    font-weight: 700;
-}
+.formulario-contacto legend { font-weight: 700; }
 
 .formulario-contacto .form-control,
-.formulario-contacto .form-select {
-    padding: .7rem .9rem;
-    border: 1px solid #8ADCE5;
-    border-radius: 10px;
-}
-
+.formulario-contacto .form-select { padding: .7rem .9rem; border: 1px solid #8ADCE5; border-radius: 10px; }
 .formulario-contacto .form-control:focus,
-.formulario-contacto .form-select:focus {
-    border-color: var(--cian-osc);
-    box-shadow: 0 0 0 3px rgba(23, 191, 208, .25);
-}
+.formulario-contacto .form-select:focus { border-color: var(--cian-osc); box-shadow: 0 0 0 3px rgba(23, 191, 208, .25); }
 
-.formulario-contacto .form-check-input:checked {
-    background-color: var(--magenta-osc);
-    border-color: var(--magenta-osc);
-}
+.formulario-contacto .form-check-input:checked { background-color: var(--magenta-osc); border-color: var(--magenta-osc); }
+.formulario-contacto .form-check-input:focus { border-color: var(--magenta); box-shadow: 0 0 0 3px rgba(213, 26, 168, .25); }
 
-.formulario-contacto .form-check-input:focus {
-    border-color: var(--magenta);
-    box-shadow: 0 0 0 3px rgba(213, 26, 168, .25);
-}
+.campo-obligatorio { color: var(--magenta-osc); font-weight: 800; }   /* el asterisco * */
 
-.campo-obligatorio {
-    color: var(--magenta-osc);
-    font-weight: 800;
-}
 
-/* Tarjetas de información */
-.info-contacto .bi {
-    margin-right: .4rem;
-    color: var(--cian-txt);
-}
+/* ---------- 2. TARJETAS DE INFORMACIÓN (datos, horario, redes) ---------- */
+.info-contacto .bi { margin-right: .4rem; color: var(--cian-txt); }
+.info-contacto a { font-weight: 700; }
+.info-contacto .redes a { display: inline-block; color: var(--magenta-osc); transition: color .2s, transform .2s; }
+.info-contacto .redes a:hover { color: var(--cian-txt); transform: translateY(-2px); }
 
-.info-contacto a {
-    font-weight: 700;
-}
 
-.info-contacto .redes a {
-    color: var(--magenta-osc);
-    transition: color .2s ease, transform .2s ease;
-    display: inline-block;
-}
-
-.info-contacto .redes a:hover {
-    color: var(--cian-txt);
-    transform: translateY(-2px);
-}
-
-/* Cómo empezar */
+/* ---------- 3. CÓMO EMPEZAR (3 pasos) ---------- */
 .paso {
     height: 100%;
     padding: 2rem 1.5rem;
     border: 1px solid #D6EEF1;
     border-radius: var(--radio);
-    background-color: #FFFFFF;
+    background-color: #fff;
     box-shadow: var(--sombra);
 }
-
-.paso-numero {
+.paso-numero {                                 /* círculo con el número del paso */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -85,12 +52,8 @@
     font-family: "Fraunces", Georgia, serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #fff;
     background: linear-gradient(135deg, var(--cian-txt), var(--magenta-osc));
 }
 
-@media (max-width: 576px) {
-    .formulario-contacto {
-        padding: 1.25rem;
-    }
-}
+@media (max-width: 576px) { .formulario-contacto { padding: 1.25rem; } }   /* celular: menos relleno */

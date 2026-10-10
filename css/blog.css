@@ -1,71 +1,30 @@
-/* =========================================================
-   HEALTHYFIT · BLOG
-   ========================================================= */
+/* =====================================================
+   HEALTHYFIT · BLOG (blog.html)
+   Índice: 1. Títulos de categoría   2. Tarjetas de artículo   3. Barra lateral
+   ===================================================== */
 
-.seccion-blog h2 {
-    padding-bottom: .5rem;
-    border-bottom: 3px solid var(--cian);
-}
 
-.seccion-blog h2 i {
-    color: var(--magenta-osc);
-    margin-right: .25rem;
-}
+/* ---------- 1. TÍTULOS DE CATEGORÍA ---------- */
+.seccion-blog h2 { padding-bottom: .5rem; border-bottom: 3px solid var(--cian); }   /* línea cian debajo */
+.seccion-blog h2 i { color: var(--magenta-osc); margin-right: .25rem; }
 
-.tarjeta-blog {
-    transition: transform .25s ease, box-shadow .25s ease;
-}
 
-.tarjeta-blog:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--sombra-fuerte);
-}
+/* ---------- 2. TARJETAS DE ARTÍCULO ---------- */
+.tarjeta-blog { transition: transform .25s, box-shadow .25s; }
+.tarjeta-blog:hover { transform: translateY(-4px); box-shadow: var(--sombra-fuerte); }   /* sube al pasar el mouse */
+.tarjeta-blog img { height: 210px; object-fit: cover; }                                  /* todas las fotos del mismo alto */
 
-.tarjeta-blog img {
-    height: 210px;
-    object-fit: cover;
-}
-
-.tarjeta-blog .card-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.tarjeta-blog .btn {
-    align-self: flex-start;
-    margin-top: auto;
-}
-
+.tarjeta-blog .card-body { display: flex; flex-direction: column; }
+.tarjeta-blog .btn { align-self: flex-start; margin-top: auto; }   /* el botón "Leer más" siempre abajo */
 .tarjeta-blog .collapse,
-.tarjeta-blog .collapsing {
-    margin-bottom: 1rem;
-}
+.tarjeta-blog .collapsing { margin-bottom: 1rem; }                 /* espacio del texto desplegado */
 
-/* Barra lateral */
-.aside-blog {
-    top: 100px;
-    z-index: 1;
-}
 
-.aside-blog .list-group-item a {
-    font-weight: 700;
-    text-decoration: none;
-}
+/* ---------- 3. BARRA LATERAL ---------- */
+.aside-blog { top: 100px; z-index: 1; }                            /* se queda fija al bajar la página */
+.aside-blog .list-group-item a { font-weight: 700; text-decoration: none; }
+.aside-blog .list-group-item a:hover { text-decoration: underline; }
+.aside-blog .badge { background-color: var(--magenta-osc); }       /* el numerito de cada categoría */
 
-.aside-blog .list-group-item a:hover {
-    text-decoration: underline;
-}
-
-.aside-blog .badge {
-    background-color: var(--magenta-osc);
-}
-
-.consejos-rapidos li {
-    display: flex;
-    gap: .6rem;
-}
-
-.consejos-rapidos i {
-    color: var(--cian-txt);
-    margin-top: .15rem;
-}
+.consejos-rapidos li { display: flex; gap: .6rem; }
+.consejos-rapidos i { color: var(--cian-txt); margin-top: .15rem; }
